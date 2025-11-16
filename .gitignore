@@ -1,0 +1,55 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual envs
+.env
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb
+
+# VSCode
+.vscode/
+.history/
+
+# macOS
+.DS_Store
+
+# Logs and local runtime data
+logs/
+*.log
+*.sqlite3
+
+# Data and models (do NOT commit large data/model files)
+data/raw/
+data/processed/
+models/
+model_finetuning/checkpoints/
+embeddings/
+
+# Secrets / API keys (never commit)
+*.pem
+*.key
+*.env.local
+.env
+
+# Docker
+docker-compose.override.yml
+.docker
+
+# ChromaDB local
+.chroma/
+
+# Hugging Face cache
+~/.cache/huggingface
