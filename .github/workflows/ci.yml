@@ -22,8 +22,16 @@ jobs:
           echo "Using HF token length: ${#HF_API_TOKEN}"
           python -m pip install --upgrade pip
           pip install -r backend/requirements.txt
+
+        name: Set PYTHONPATH
+        run: |
+          echo "PYTHONPATH=./backend" >> $GITHUB_ENV
+                 
       - name: Run tests
         env:
            MODEL_NAME: ${{ vars.MODEL_NAME }}
+           EMBED_MODEL_ID: ${{ vars.EMBED_MODEL_ID }}
+           IMAGE_MODEL_ID: ${{ vars.IMAGE_MODEL_ID }}
+           HF_API_TOKEN: ${{ secrets.HF_API_TOKEN }}
         run: |
           pytest -q
